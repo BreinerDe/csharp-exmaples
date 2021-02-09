@@ -1,6 +1,6 @@
 # csharp-exmaples
 
-This repository contains some exmaples and best practices
+This repository contains some examples and best practices
 
 * BenchmarkDotNet
   * [NuGet](https://www.nuget.org/packages/BenchmarkDotNet/)
