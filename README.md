@@ -12,7 +12,7 @@ BenchmarkDotNet
 
 .NET Core Samples:
 
-* [Correct Disposable implementation](./Disposable)
+* [Disposable Base](./Disposable)
 
 * [Testing](./Testing)
 
