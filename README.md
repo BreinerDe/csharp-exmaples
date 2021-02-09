@@ -4,15 +4,15 @@ This repository shows samples of how to use the following packages and features.
 
 * BenchmarkDotNet
   * [NuGet](https://www.nuget.org/packages/BenchmarkDotNet/)
-  * [Local](./benchmarks)
+  * [Local](./Benchmark)
 
 .NET 5/C# 9 Features:
 
-* [Record Types](./record-types)
+* [Record Types](./Record-types)
 
 Or .NET Core Features:
 
-* [Disposable implementation](./disposable)
+* [Correct Disposable implementation](./Disposable)
 
 ## Requirements
 
