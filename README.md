@@ -10,7 +10,7 @@ This repository contains some examples and best practices
 
 * [Record Types](./Record-Types)
 
-.NET Core Features:
+.NET Core Samples:
 
 * [Correct Disposable implementation](./Disposable)
 
@@ -20,6 +20,9 @@ ASP .NET Core Features:
 
 * [Errorhandling](./Errorhandling)
 
+Entity Framework Core Features:
+
+* [Repository with EF Core] (./Repository)
 
 ## Requirements
 
