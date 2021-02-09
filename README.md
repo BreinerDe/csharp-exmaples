@@ -1,10 +1,10 @@
 # csharp-exmaples
 
-This repository contains some examples and best practices
+This repository contains some examples for:
 
-* BenchmarkDotNet
-  * [NuGet](https://www.nuget.org/packages/BenchmarkDotNet/)
-  * [Local](./Benchmark)
+BenchmarkDotNet
+
+  * [Benchmark](./Benchmark)
 
 .NET 5/C# 9 Features:
 
