@@ -8,7 +8,7 @@ This repository shows samples of how to use the following packages and features.
 
 .NET 5/C# 9 Features:
 
-* [Record Types](./Record-types)
+* [Record Types](./Record-Types)
 
 Or .NET Core Features:
 
