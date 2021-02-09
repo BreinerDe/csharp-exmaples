@@ -1,6 +1,6 @@
 # csharp-exmaples
 
-This repository shows samples of how to use the following packages and features.
+This repository contains some exmaples and best practices
 
 * BenchmarkDotNet
   * [NuGet](https://www.nuget.org/packages/BenchmarkDotNet/)
@@ -13,6 +13,8 @@ This repository shows samples of how to use the following packages and features.
 .NET Core Features:
 
 * [Correct Disposable implementation](./Disposable)
+
+* [Testing](./Testing)
 
 ASP .NET Core Features:
 
