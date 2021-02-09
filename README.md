@@ -22,7 +22,7 @@ ASP .NET Core Features:
 
 Entity Framework Core Features:
 
-* [Repository with EF Core] (./Repository)
+* [Repository with EF Core](./Repository)
 
 ## Requirements
 
