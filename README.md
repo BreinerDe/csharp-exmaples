@@ -10,9 +10,14 @@ This repository shows samples of how to use the following packages and features.
 
 * [Record Types](./Record-Types)
 
-Or .NET Core Features:
+.NET Core Features:
 
 * [Correct Disposable implementation](./Disposable)
+
+ASP .NET Core Features:
+
+* [Errorhandling](./Errorhandling)
+
 
 ## Requirements
 
