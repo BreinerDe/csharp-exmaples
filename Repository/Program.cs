@@ -19,7 +19,8 @@ namespace GenericRepository
 
         private static void ConfigureServices(HostBuilderContext context, IServiceCollection serviceCollection)
         {
-            serviceCollection.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            serviceCollection.AddDbContextPool<DatabaseContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
+            serviceCollection.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
     }
 }

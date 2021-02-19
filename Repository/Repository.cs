@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
+using Argument.Check;
 using GenericRepository.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,43 +15,42 @@ namespace GenericRepository
         private readonly DbSet<T> entities;
         public Repository(DbContext context)
         {
-            this.Context = context;
+            Context = context;
             entities = context.Set<T>();
         }
-        public IEnumerable<T> GetAll()
+        public IAsyncEnumerable<T> GetAllAsync()
         {
-            return entities.AsEnumerable();
+            return entities.AsAsyncEnumerable();
         }
-        public T GetById(Guid id)
+        public async Task<T> GetByIdAsync(Guid id)
         {
-            return entities.SingleOrDefault(s => s.Id == id);
-        }
-
-        public IEnumerable<T> GetBy(Expression<Func<T, bool>> predicate)
-        {
-            return entities.Where(predicate);
+            return await entities.SingleOrDefaultAsync(s => s.Id == id);
         }
 
-        public void Insert(T entity)
+        public IAsyncEnumerable<T> GetByAsync(Expression<Func<T, bool>> predicate)
         {
-            if (entity == null) throw new ArgumentNullException("entity");
-
-            entities.Add(entity);
-            Context.SaveChanges();
+            return entities.Where(predicate).AsAsyncEnumerable();
         }
-        public void Update(T entity)
+        public async Task<T> InsertAsync(T entity)
         {
-            if (entity == null) throw new ArgumentNullException("entity");
-            Context.SaveChanges();
+            Throw.IfNull(() => entity);
+
+            await entities.AddAsync(entity);
+            await Context.SaveChangesAsync();
+            return entity;
+        }
+        public async Task<T> UpdateAsync(T entity)
+        {
+            Throw.IfNull(() => entity);
+
+            await Context.SaveChangesAsync();
+            return entity;
         }
         public void Delete(Guid id)
         {
-            if (id == null) throw new ArgumentNullException("entity");
-
             var entity = entities.SingleOrDefault(s => s.Id == id);
             entities.Remove(entity);
             Context.SaveChanges();
         }
-
     }
 }
